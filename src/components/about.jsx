@@ -1,9 +1,35 @@
+import axios from "axios";
 import "../styles/about.css"
+import Banner from "./banner";
+import Footer from "./footer";
+import Navbar from "./navbar";
+import { useEffect, useState } from "react";
 
 const About = () => {
+
+
+    let title = "aboutPage"
+
+
+    let [posts, setPosts] = useState([])
+    useEffect(() => {
+        let fetchData = async () => {
+            const res = await axios.get("http://localhost:4000/signup")
+            const data = await res.data
+            setPosts(data)
+        }
+        fetchData()
+    }, [])
+
+
+
     return (
 
+
         <div className="about">
+            <Navbar />
+
+            <Banner data={title} />
 
             <div className="d1 d-flex">
 
@@ -16,14 +42,14 @@ const About = () => {
 
 
 
-                    <div className="blocks ms-4"> 
+                    <div className="blocks ms-4">
 
-                       
-                       <div className="c1">
+
+                        <div className="c1">
                             <h1>10</h1>
                             <h5>years of Experienced</h5>
                         </div>
-                      
+
 
                         <div className="c1">
                             <h1>200</h1>
@@ -37,7 +63,7 @@ const About = () => {
 
 
                         <div className="c1">
-                            <h1>40</h1>
+                            <h1>{posts.length}</h1>
                             <h5>Happy Coustomers</h5>
                         </div>
 
@@ -50,7 +76,7 @@ const About = () => {
 
             </div>
 
-
+            <Footer />
 
         </div>
 
