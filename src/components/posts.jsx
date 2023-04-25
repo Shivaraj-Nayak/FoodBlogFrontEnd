@@ -11,12 +11,17 @@ const Posts = () => {
     let title = "All Posts"
 
     let [posts, setPosts] = useState([])
+
+    let [loder, setloder] = useState(true)
+
+
     useEffect(() => {
         let fetchData = async () => {
             let response = await axios.get("http://localhost:4000/posts")
             let postData = response.data
             console.log(postData);
             setPosts(postData)
+            setloder(false)
         }
         fetchData()
     }, [])
@@ -28,10 +33,11 @@ const Posts = () => {
 
             <Navbar />
             <Banner data={title} />
-
             <h1 className="mt-4 mb-0  text-danger text-opacity-100 text-center">All Posts</h1>
 
-
+            <div className="loder text-center">
+                {loder && <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif?20170503175831" alt="" />}
+            </div>
 
             <div className="postss ">
 
@@ -62,7 +68,7 @@ const Posts = () => {
 
             <h5 className=" m-0 p-0 text-center text-danger">Number of posts : {posts.length}</h5>
 
-<Footer/>
+            <Footer />
         </div>
     );
 }

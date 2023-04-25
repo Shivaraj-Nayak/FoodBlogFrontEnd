@@ -7,7 +7,6 @@ import Home from './components/home';
 import About from './components/about';
 import Addpost from './components/addpost';
 import Navbar from './components/navbar';
-import Foods from './components/foods';
 import Posts from './components/posts';
 import Readmore from './components/singlepost';
 import Singlepost from './components/singlepost';
@@ -25,7 +24,6 @@ function App() {
           <Route element={<About />} path='/aboutPage' />
           <Route element={<Addpost />} path='/addpost' />
           <Route element={<Navbar />} path='/navbar' />
-          <Route element={<Foods />} path='/foods' />
           <Route element={<Posts />} path='/posts' />
 
           <Route element={<Singlepost />} path='/posts/:id' />

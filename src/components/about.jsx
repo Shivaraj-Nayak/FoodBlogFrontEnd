@@ -12,11 +12,21 @@ const About = () => {
 
 
     let [posts, setPosts] = useState([])
+
+    let [foods, setfoods] = useState([])
+
     useEffect(() => {
         let fetchData = async () => {
+
             const res = await axios.get("http://localhost:4000/signup")
+            const res2 = await axios.get("http://localhost:4000/posts")
+
             const data = await res.data
+            const data2 = await res2.data
+
             setPosts(data)
+            setfoods(data2)
+
         }
         fetchData()
     }, [])
@@ -52,7 +62,7 @@ const About = () => {
 
 
                         <div className="c1">
-                            <h1>200</h1>
+                            <h1>{foods.length}</h1>
                             <h5>Foods</h5>
                         </div>
 

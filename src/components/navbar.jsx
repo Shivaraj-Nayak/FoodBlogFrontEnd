@@ -12,11 +12,9 @@ const Navbar = () => {
                 <Link to={'/homePage'} href="">Home</Link>
 
                 <Link to={'/aboutPage'} href="">About</Link>
-                <Link to={'/foods'} href="">Foods</Link>
                 <Link to={'/posts'} href="">Posts</Link>
 
                 <Link to={'/addpost'} href="">Add Post</Link>
-                <a href="">Contact</a>
                 <Link to={'/'} href="">Logout</Link>
 
             </div>

@@ -41,12 +41,12 @@ const Addpost = () => {
 
             <Navbar />
             <Banner data={title} />
-            <div className="forms d-flex  align-content-between  justify-content-evenly">
+            <div className="forms d-flex  align-content-between  justify-content-center">
 
 
 
                 <div className="image">
-                    <img className="" height="680px" width="550px" src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlyeWFuaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="" />
+                    <img className="" height="680px" width="500px" src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlyeWFuaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="" />
                 </div>
 
 
